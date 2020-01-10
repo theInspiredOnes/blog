@@ -1,0 +1,49 @@
+/*------------------------------------*\
+	$TYPOGRAPHY
+\*------------------------------------*/
+h1,.alpha{
+	@include font-size(2.25 * $base-font-size);
+}
+h2,.beta{
+	@include font-size(1.875 * $base-font-size);
+}
+h3,.gamma{
+	@include font-size(1.5 * $base-font-size);
+}
+h4,.delta{
+	@include font-size(1.25 * $base-font-size);
+}
+h5,.epsilon{
+	@include font-size(1 * $base-font-size);
+}
+h6,.zeta{
+	@include font-size(0.875 * $base-font-size);
+}
+
+/*
+ * When putting two headlines right after each other,
+ * use this on the first one
+ */
+.hN{
+	margin-bottom:0;
+}
+
+/*
+ * Additional super huge sizes
+ */
+.giga{
+	@include font-size(6 * $base-font-size);
+}
+.mega{
+	@include font-size(4.5 * $base-font-size);
+}
+.kilo{
+	@include font-size(3 * $base-font-size);
+}
+
+/*
+ * Use this for introductional paragraphs
+ */
+.lead {
+	font-size: 1.25 * $base-font-size;
+}

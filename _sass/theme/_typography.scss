@@ -1,0 +1,26 @@
+%amaranth {
+	font-family: "Amaranth", "Lato", sans-serif;
+}
+
+figcaption {
+	font-size: $base-font-size;
+}
+
+h1, .alpha, h2, .beta, h3, .gamma {
+	text-align: center;
+}
+
+h1, .alpha {
+	@extend %amaranth;
+	font-weight: normal;
+	color: darken($base-font-color, 20%);
+}
+
+h2, .beta {
+	color: $brand-color;
+	font-weight: 300;
+}
+
+h3, .gamma {
+	font-weight: 300;
+}

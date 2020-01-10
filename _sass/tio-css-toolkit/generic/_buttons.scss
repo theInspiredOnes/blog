@@ -1,0 +1,75 @@
+/*------------------------------------*\
+	$BUTTONS
+\*------------------------------------*/
+.button {
+	padding: 1em 1.5em;
+	border-radius: $base-ui-radius;
+	background-color: $base-ui-color;
+	text-decoration: none;
+	cursor: pointer;
+	color: $base-font-color;
+	font-weight: bold;
+	white-space: nowrap;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+	border: none;
+
+	&:hover {
+		background-color: darken($base-ui-color, 5%);
+		text-decoration: none;
+	}
+}
+
+/*
+ * Uses $brand-color as background
+ */ 
+.button--primary {
+	background-color: $brand-color;
+	color: #fff;
+
+	&:hover {
+		background-color: lighten($brand-color, 7%);
+	}
+}
+
+/*
+ * Same spacing, but no background or border
+ */
+.button--stripped {
+	border: none;
+	background: transparent;
+	font-weight: normal;
+
+	&:hover {
+		background: transparent;
+	}
+}
+
+/*
+ * No background, just a border
+ */
+.button--hollow {
+	background: transparent;
+	border: 2px solid $base-ui-color;
+
+	&:hover {
+		background: transparent;
+		border-color: darken($base-ui-color, 5%);
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MEDIA-QUERIES
+\*------------------------------------*/
+@include grid-media-query('portable') {
+	.button {
+		display: block;
+		width: 100%;
+		margin-bottom: $base-spacing-unit;
+	}
+}

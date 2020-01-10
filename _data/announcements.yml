@@ -1,0 +1,5 @@
+---
+- show_until: '2019-11-28'
+  description: 'Due to cloud network infrastructure maintenance, BIIGLE might be temporarily unavailable on 27th November 2019 08:00-10:00 CET.'
+- show_until: '2019-07-24'
+  description: 'Due to cloud network infrastructure maintenance, BIIGLE might be temporarily unavailable on 23th July 2019 07:00-00:00 CEST.'

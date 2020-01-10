@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ site.title | escape }}</title>
+        <meta name="description" content="{{ site.description }}">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700|Amaranth:400" rel="stylesheet">
+        <link href="{{ '/assets/css/main.css' | prepend: site.url }}" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header cf" role="banner">
+            <div class="logo">
+                <a href="{{ site.url }}">
+                    <img src="{{ '/assets/images/logo.svg' | prepend: site.url }}" alt="{{ site.title | escape }}" />
+                </a>
+            </div>
+            <nav class="top-nav">
+                <ul class="top-nav__links nav nav--inline">
+                    <li><a href="{{ site.url }}">Home</a></li>
+                    <li><a href="https://the-inspired-ones.de/kontakt">Get in touch</a></li>
+                    <li><a href="https://the-inspired-ones.de/impressum">Impressum</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {{content}}
+    </body>
+</html>

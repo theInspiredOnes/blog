@@ -1,0 +1,177 @@
+/*------------------------------------*\
+	$FORMS
+\*------------------------------------*/
+.form {
+
+	/*
+	 * Base input style
+	 */ 
+
+	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+		border: 1px solid darken($base-ui-color, 10%);
+		border-radius: $base-ui-radius;
+		@include font-size($base-font-size);
+		padding: 0.25*$base-spacing-unit;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+		box-sizing: border-box;
+		width: 320px;
+		max-width: 100%;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1px 3px rgba(0,0,0,.2);
+		}
+
+		&.erroneous {
+			border-color: $error-color;
+			box-shadow: 0 1px 3px transparentize($error-color, .5);
+		}
+	}
+
+	input[type=checkbox], input[type=radio] {
+		margin-right: 6px;
+	}
+
+	legend {
+		@extend .gamma;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid $base-ui-color;
+		padding-bottom: 0.25 * $base-spacing-unit;
+		margin-bottom: 0.75*$base-spacing-unit;
+		box-sizing: border-box;
+	}
+
+	fieldset {
+		border: none;
+	}
+
+	select, option {
+		height: 1.5* $base-spacing-unit + 2px;
+		box-shadow: none;
+	}
+
+}
+
+/*
+ * A vertical form style
+ */ 
+.form--stacked {
+	label {
+		display: block;
+		@include font-size($base-font-size);
+		margin-top: -0.25 * $base-spacing-unit;
+		margin-bottom: 0.125 * $base-spacing-unit;
+	}
+
+	.help-text {
+		@extend .muted;
+		@include font-size(0.875 * $base-font-size);
+		font-style: italic;
+		margin-bottom: -0.125* $base-spacing-unit;
+		margin-top: 0.125*$base-spacing-unit;
+	}
+}
+
+/*
+ * A form with full width inputs
+ */ 
+.form--block {
+	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+		display: block; 
+		width: 100%;
+	}
+}
+
+/*
+ * A horizontally aligned form
+ */
+.form--inline {
+	.button, button, input[type=submit] {
+		padding: 0.25 * $base-spacing-unit 0.5 * $base-spacing-unit;
+	}
+}
+
+/*
+ * Base form group element
+ */ 
+.form__control-group, .form__controls {
+	display: block;
+	margin-bottom: $base-spacing-unit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$RADIO-GROUPS
+\*------------------------------------*/
+.radio-group {
+	list-style: none;
+	margin-left: 0;
+}
+
+.radio-group--inline li {
+	display: inline-block;
+	padding-right: $base-spacing-unit;
+}
+
+li.radio-group__label {
+	font-weight: bold;
+	display: block;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MESSAGES
+\*------------------------------------*/
+.form .message {
+	padding: 1em 1.5em;
+	border-radius: $base-ui-radius;
+
+	&.success {
+		background-color: $success-color;
+		color: #fff;
+	}
+
+	&.error {
+		background-color: $error-color;
+		color: #fff;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+	$HELPERS
+\*------------------------------------*/
+.form__potty {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.required:after {
+	content: " *";
+	color: $error-color;
+}
+
+
+
+
+/*------------------------------------*\
+	$MEDIA-QUERIES
+\*------------------------------------*/
+@include grid-media-query('portable') {
+	.form--stacked {
+		input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+			display: block;
+			width: 100%;
+		}
+	}
+}

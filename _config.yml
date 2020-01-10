@@ -1,0 +1,16 @@
+
+title: the Inspired Ones Blog
+description: >-
+  This is the blog of the Inspired Ones, a small web design and web development agency from Germany.
+url: "https://blog.the-inspired-ones.de"
+permalink: /:title
+timezone: Europe/Berlin
+sass:
+  style: compressed
+collections:
+  - authors
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CNAME

@@ -1,0 +1,14 @@
+<li class="article">
+   {% if post.thumb %}
+      <figure class="article__figure">
+         <img class="noshadow" src="{{ '/assets/images/' | prepend: site.url | append: post.thumb }}">
+      </figure>
+   {% endif %}
+   <h1 class="article__title"><a class="article__link" href="{{ post.url }}">{{ post.title }}</a></h1>
+   <p class="article__date">
+      <time datetime="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+   </p>
+   <p class="article__excerpt">
+      {{ post.excerpt }}
+   </p>
+</li>

@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $RESPONSIVE-HELPERS
+\*------------------------------------*/
+
+/*
+ * Hide classes, to hide elements on certain devices.
+ */
+@mixin hide($namespace:"") {
+    #{$class-type}#{$namespace}hide         { display: none; }
+}
+
+@if $responsive == true {
+
+    @each $name in $breakpoint-has-widths {
+        @include grid-media-query($name) {
+           @include hide('#{$name}--');
+        }
+    }
+}
+
+/*
+ * Fit images to grid item widths
+ */
+.grid__item img {
+	max-width: 100%;
+}
+
+@include grid-media-query('palm') {
+	.grid__item img {
+		width: 100%;
+	}
+}

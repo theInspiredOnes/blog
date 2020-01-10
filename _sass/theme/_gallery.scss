@@ -1,0 +1,18 @@
+.gallery {
+	@extend %grid;
+}
+
+.gallery__image {
+	@extend %grid__item;
+	@extend %palm--one-whole;
+	@extend %lap--one-half;
+	@extend %one-third;
+
+	img {
+		width: 100%;
+	}
+}
+
+.featherlight-image {
+	margin-bottom: 0;
+}

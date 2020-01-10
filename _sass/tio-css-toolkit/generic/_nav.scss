@@ -1,0 +1,45 @@
+/*------------------------------------*\
+	$NAVIGATION BASE STYLES
+\*------------------------------------*/
+
+.nav {
+	list-style: none;
+	margin-left: 0;
+}
+
+/*
+ * A horizontal navigation style 
+ */ 
+.nav--inline {
+	margin-left: -$base-spacing-unit;
+
+	ul {
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-left: $base-spacing-unit;	
+	}
+
+	a {
+		display: inline-block;	
+		margin-bottom: 0;
+	}
+}
+
+/*
+ * A vertical navigation style 
+ */
+.nav--block {
+	margin-left: 0;
+
+	li {
+		display: block;
+	}
+
+	a {
+		display: block;
+	}
+}

@@ -1,0 +1,10 @@
+---
+layout: base
+---
+<main class="main" role="main">
+    <ul class="articles">
+        {% for post in site.posts %}
+            {% include post_li.html %}
+        {% endfor %}
+    </ul>
+</main>

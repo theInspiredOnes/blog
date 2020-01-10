@@ -1,0 +1,77 @@
+/*------------------------------------*\
+	$GLOBAL STYLES AND HELPERS
+\*------------------------------------*/
+html {
+    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    overflow-y:scroll;
+    min-height:100%;
+    color: $base-font-color;
+}
+
+.centered {
+	@include centered($base-page-width);
+}
+
+a {
+	color: $brand-color;
+	@include transition(all);
+	
+	&:hover {
+		color: lighten($brand-color, 20%);
+	}
+}
+
+img {
+	margin-bottom: -5px; // prevent img tags from messing up baselines
+}
+
+figure figcaption {
+	margin-top: $base-spacing-unit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$CLEARFIX
+\*------------------------------------*/
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table; 
+}
+
+.cf:after {
+	clear: both;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$HELPERS
+\*------------------------------------*/
+.muted {
+	color: lighten($base-font-color, 10%);
+}
+
+.smaller {
+	font-size: 0.875*$base-font-size;
+}
+
+.align--center { text-align: center; }
+.align--left { text-align: left; }
+.align--right { text-align: right; }
+
+.float--left { float: left; }
+.float--right { float: right; }
+
+.nomargin {
+	margin: 0;
+}
+
+.muted-link {
+	color: $base-font-color;
+}

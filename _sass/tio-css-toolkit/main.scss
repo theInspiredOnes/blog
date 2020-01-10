@@ -1,0 +1,64 @@
+/* Set Custom Variables here
+ * ====================================================
+*/
+
+
+$breakpoints: (
+	'palm' '(max-width: 480px)',
+	'lap' '(min-width: 481px) and (max-width: 767px)',
+	'portable' '(max-width: 767px)',
+	'desk' '(min-width: 768px)'
+);
+
+$push: true;
+$use-markup-fix: false;
+$gutter: 48px;
+
+$base-font-family: "Source Sans Pro", sans-serif;
+$base-font-color: #555;
+
+$base-font-size:    16px;
+$base-line-height:  24px;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$base-page-width:   960px;
+$base-spacing-unit: $base-line-height;
+
+$brand-color: #96BE3C;
+$highlight-color: $brand-color;
+
+$success-color: #80C080;
+$error-color: #C45D58;
+
+$base-ui-radius: 2px;
+$base-ui-color: lighten($brand-color, 30%);
+
+// no grid classes
+$use-silent-classes: true;
+
+/* Load Frameworks
+ * ====================================================
+*/
+@import "vendor/csswizardry-grids";
+@import "generic/responsive-helpers";
+
+/* Load partials
+ * ====================================================
+*/
+@import "generic/mixins";
+@import "generic/normalize";
+@import "generic/reset";
+@import "generic/shared";
+@import "generic/typography";
+@import "generic/global";
+@import "generic/buttons";
+@import "generic/forms";
+@import "generic/nav";
+
+//@import "theme/layout";
+
+// for debugging
+// body {
+//     background: url(../images/baseline-grid.png);
+// }
+

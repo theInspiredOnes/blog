@@ -1,0 +1,70 @@
+---
+---
+
+/* Set Custom Variables here
+ * ====================================================
+*/
+
+
+$breakpoints: (
+	'palm' '(max-width: 480px)',
+	'lap' '(min-width: 481px) and (max-width: 767px)',
+	'portable' '(max-width: 767px)',
+	'desk' '(min-width: 768px)'
+);
+
+$push: true;
+$use-markup-fix: false;
+$gutter: 48px;
+
+$base-font-family: "Lato", sans-serif;
+$base-font-color: #555;
+
+$base-font-size:    18px;
+$base-line-height:  27px;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$base-page-width:   960px;
+$base-spacing-unit: $base-line-height;
+
+$brand-color: #96BE3C;
+$highlight-color: $brand-color;
+$background-color: #F5F8F2;
+
+$success-color: #80C080;
+$error-color: #C45D58;
+
+$base-ui-radius: 4px;
+$base-ui-color: #e6e6e6;
+
+// no grid classes
+$use-silent-classes: true;
+
+/* Load Frameworks
+ * ====================================================
+*/
+@import "tio-css-toolkit/vendor/csswizardry-grids";
+@import "tio-css-toolkit/generic/responsive-helpers";
+
+/* Load partials
+ * ====================================================
+*/
+@import "tio-css-toolkit/generic/mixins";
+@import "tio-css-toolkit/generic/normalize";
+@import "tio-css-toolkit/generic/reset";
+@import "tio-css-toolkit/generic/shared";
+@import "tio-css-toolkit/generic/typography";
+@import "tio-css-toolkit/generic/global";
+@import "tio-css-toolkit/generic/buttons";
+@import "tio-css-toolkit/generic/forms";
+@import "tio-css-toolkit/generic/nav";
+
+@import "theme/gallery";
+@import "theme/layout";
+@import "theme/typography";
+
+// for debugging
+// body {
+//     background: url(../images/baseline-grid.png);
+// }
+
