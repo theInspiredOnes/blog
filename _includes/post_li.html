@@ -4,7 +4,7 @@
          <img class="noshadow" src="{{ '/assets/images/' | prepend: site.url | append: post.thumb }}">
       </figure>
    {% endif %}
-   <h1 class="article__title"><a class="article__link" href="{{ post.url }}">{{ post.title }}</a></h1>
+   <h1 class="article__title"><a class="article__link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h1>
    <p class="article__date">
       <time datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
    </p>
