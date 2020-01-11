@@ -6,7 +6,7 @@
    {% endif %}
    <h1 class="article__title"><a class="article__link" href="{{ post.url }}">{{ post.title }}</a></h1>
    <p class="article__date">
-      <time datetime="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
    </p>
    <p class="article__excerpt">
       {{ post.excerpt }}

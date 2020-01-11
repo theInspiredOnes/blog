@@ -16,7 +16,28 @@ layout: base
         {{ content }}
     </article>
 
-    TODO: Author
+    {% if page.author %}
+        {% assign author = site.authors | where: 'short_name', page.author | first %}
+        <div class="author">
+            <div class="author__inner">
+                <figure class="author__avatar nocenter">
+                    {% if author.avatar %}
+                        <img src="{{ '/assets/images/avatars/' | prepend: site.url | append: author.avatar }}">
+                    {% else %}
+                        <img src="{{ '/assets/images/avatars/empty-avatar.png' | prepend: site.url}}">
+                    {% endif %}
+                </figure>
+                <div class="author__info">
+                    <p>
+                        <em>{{ page.date | date: "%B %d, %Y" }} – written by <strong>{{ author.name }}</strong></em>.
+                    </p>
+                    <p>
+                        {{ author.content | markdownify}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 
     <div class="comments" id="disqus_thread"></div>
     <script type="text/javascript">

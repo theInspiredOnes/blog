@@ -2,7 +2,7 @@
 layout: post
 title: "Managing Kirby Plugins With Git"
 author: martin
-thumb: git-kirby-love.svg
+thumb: posts/managing/title.svg
 ---
 
 Welcome to the first post on our new blog! In this post, we would like to show you how to use Git submodules, a great feature of the [Git version control system](http://git-scm.com/), to manage the different components of a Kirby website.
@@ -16,7 +16,7 @@ Kirby is a [powerful file-based CMS](http://getkirby.com/) written in PHP. It is
 A few months ago the highly anticipated version 2 of Kirby was released bringing lots of new features. Developers now could clone the new [Starterkit](https://github.com/getkirby/starterkit), always getting the latest releases of Kirby, the Kirby Toolkit and the Kirby Panel, each developed in their own Git repository. This setup of *automagically* syncing all the repositories made us curious since we never really put Git submodules into practice before.
 
 <figure>
-   <img src="/assets/images/starterkit-modules.png" width="200">
+   <img src="/assets/images/posts/managing/starterkit-modules.png" width="200">
    <figcaption>Git submodules next to conventional directories of the Starterkit displayed on GitHub</figcaption>
 </figure>
 
@@ -111,7 +111,7 @@ Now we have all the tools for using our own submodules. But how can we apply thi
 If you are a developer, you probably already know that splitting up a project into small maintainable modules is usually a good idea. The same principle applies to a Kirby website, too. Kirby plugins are modules, or CSS frameworks, or virtually anything that you plug into your Kirby website that adds a bunch of new functionalities. All of these can be added as a Git submodule.
 
 <figure>
-   <img src="/assets/images/base-modules.png" width="350">
+   <img src="/assets/images/posts/managing/base-modules.png" width="350">
    <figcaption>Modules of one of our Kirby projects as Git submodules displayed in our GitLab</figcaption>
 </figure>
 
